@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.env
+# local "database" - contains user accounts
+server/data.json

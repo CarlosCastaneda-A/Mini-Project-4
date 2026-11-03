@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+main {
+    padding: 30px 0;
+}
+
+.create-section,
+.filter-section,
+.post-card,
+.no-posts {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.create-section h2,
+.filter-section h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background-color: #333;
+    color: white;
+}
+
+.btn-edit {
+    background-color: #ddd;
+    color: #222;
+}
+
+.btn-delete {
+    background-color: #b00020;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #ddd;
+    color: #333;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-section h2 {
+    margin-bottom: 0;
+}
+
+.filter-section form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-section select {
+    width: auto;
+    min-width: 150px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.post-header h2 {
+    margin-bottom: 5px;
+}
+
+.author {
+    color: #555;
+}
+
+.date {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.category {
+    background-color: #333;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.post-content {
+    padding: 20px 0;
+}
+
+.post-content p {
+    white-space: pre-wrap;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.post-actions form {
+    display: inline;
+}
+
+.no-posts {
+    text-align: center;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .post-header {
+        flex-direction: column;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-section form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-section select {
+        width: 100%;
+    }
+
+    .post-actions {
+        flex-direction: column;
+    }
+
+    .post-actions .btn,
+    .post-actions form,
+    .post-actions form button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .edit-actions {
+        flex-direction: column;
+    }
+
+    .edit-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ================================================================
+   React-version additions
+   ================================================================ */
+
+/* Navigation (inside the dark header) */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 20px;
+    margin-top: 20px;
+}
+
+.nav a {
+    color: #ddd;
+    text-decoration: none;
+    padding: 6px 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: white;
+    border-bottom-color: white;
+}
+
+.nav-user {
+    color: #aaa;
+}
+
+.btn-nav {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #888;
+    padding: 6px 14px;
+}
+
+.btn-nav:hover {
+    background-color: #555;
+}
+
+/* Alerts and status text */
+.alert {
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+}
+
+.alert-error {
+    background-color: #fdecea;
+    color: #8a1c1c;
+    border: 1px solid #f5c2c0;
+}
+
+.status {
+    text-align: center;
+    color: #777;
+    padding: 30px 0;
+}
+
+.muted {
+    color: #777;
+}
+
+.posting-as {
+    margin-bottom: 15px;
+}
+
+/* Sign in / sign up */
+.auth-card {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.auth-switch {
+    margin-top: 18px;
+}
+
+a {
+    color: #1a56b0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Filter row (label + select now live in a div, not a form) */
+.filter-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-control select {
+    width: auto;
+    min-width: 150px;
+}
+
+/* Edit-in-place card */
+.post-card.editing {
+    border: 2px solid #333;
+}
+
+.post-card.editing h2 {
+    margin-bottom: 18px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* My Profile */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+}
+
+.profile-grid dt {
+    font-size: 0.85rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.profile-grid dd {
+    font-weight: bold;
+    word-break: break-word;
+}
+
+@media (max-width: 700px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-control {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-control select {
+        width: 100%;
+    }
+
+    .post-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

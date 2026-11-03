@@ -1,0 +1,12 @@
+{
+  "name": "blog-server",
+  "version": "2.0.0",
+  "description": "JSON API for the blog app (Node.js + Express). Consumed by the React frontend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
